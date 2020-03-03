@@ -20,9 +20,7 @@ int main() {
 		scanf("%d %d", & x, &y);
 		double distance = (double) y - x;
 		double k;
-		k = (-2 + sqrt(4 + 16 * distance)) > (-2 + sqrt(16 * distance)) ?
-			(-2 + sqrt(16 * distance)) : (-2 + sqrt(4 + 16 * distance));
-		k /= 2;
+		k = (-2 + sqrt(16 * distance)) / 2; 
 		if (k - (int)k == 0)
 			printf("%d\n", (int)k);
 		else

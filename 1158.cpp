@@ -21,7 +21,6 @@ int main() {
 	int N, K; cin >> N >> K;
 	list<int> nums;
 	list<int>::iterator n_iter;
-	list<int>::iterator tmp;
 
 	for (int i = 0; i < N; i++) {
 		nums.push_back(i + 1);
@@ -35,10 +34,7 @@ int main() {
 		}
 		cout << *n_iter;
 		if (nums.size() != 1) cout << ", ";
-		tmp = n_iter;
-		tmp++;
-		nums.erase(n_iter);
-		n_iter = tmp;
+		n_iter = nums.erase(n_iter);
 	}
 	cout << ">";
 }
